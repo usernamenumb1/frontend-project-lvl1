@@ -19,5 +19,8 @@
   "homepage": "https://github.com/usernamenumb1/frontend-project-lvl1#readme",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
   }
 }
