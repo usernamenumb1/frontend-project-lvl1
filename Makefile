@@ -4,3 +4,5 @@ brain-games: # для запуска брейнгамез жс
 	node bin/brain-games.js
 publish: # для публикации
 	npm publish --dry-run
+lint: # запускает линтер
+	npx eslint .
