@@ -6,3 +6,5 @@
 ![LinterCheck](https://github.com/usernamenumb1/frontend-project-lvl1/actions/workflows/github-actions.yml/badge.svg)
 ### Link to even game
 https://asciinema.org/a/LFTn3eJiiNZPnHPCYqWyXDG0k
+### Link to calculation game
+https://asciinema.org/a/LFTn3eJiiNZPnHPCYqWyXDG0k
