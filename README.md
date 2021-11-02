@@ -7,4 +7,6 @@
 ### Link to even game
 https://asciinema.org/a/LFTn3eJiiNZPnHPCYqWyXDG0k
 ### Link to calculation game
-https://asciinema.org/a/LFTn3eJiiNZPnHPCYqWyXDG0k
+https://asciinema.org/a/jWOP0jA1Sd4ZgpgMQ78vbB7Hv
+### Link to gcd game
+https://asciinema.org/a/ixBFLtWajKIo4BYymiIiHbgTr

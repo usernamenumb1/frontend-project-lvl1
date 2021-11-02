@@ -1,4 +1,4 @@
-import { getRandom, greeting, getRandomExp, isCalc, isCorrect, getAnswer } from '../src/index.js';
+import { greeting, getRandomExp, solution, isCorrect, getAnswer } from '../src/index.js';
 
 const brainCalc = () => {
   let count = 0;
@@ -6,8 +6,8 @@ const brainCalc = () => {
   console.log('What is the result of the expression?');
   while (count < 3) {
     const exp = getRandomExp();
-    let answer = getAnswer(exp);
-    const correctans = isCalc(exp);
+    const answer = getAnswer(exp);
+    const correctans = solution(exp);
     if (isCorrect(correctans, answer)) {
         count += 1;
         console.log('Correct!');
