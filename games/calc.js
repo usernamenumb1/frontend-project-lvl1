@@ -1,4 +1,6 @@
-import { greeting, getRandom, isCorrect, getAnswer } from '../src/index.js';
+import { greeting, isCorrect, getAnswer } from '../src/index.js';
+
+const getRandom = () => Math.floor(Math.random() * 100);
 
 const getRandomExp = () => {
   const expressions = '+-*';

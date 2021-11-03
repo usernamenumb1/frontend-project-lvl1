@@ -1,6 +1,8 @@
-import { getRandom, greeting, isCorrect, getAnswer } from '../src/index.js';
+import { greeting, isCorrect, getAnswer } from '../src/index.js';
 
-const isEven = (int) => (int % 2 === 0) ? 'yes' : 'no';
+const getRandom = () => Math.floor(Math.random() * 100);
+
+const isEven = (int) => ((int % 2 === 0) ? 'yes' : 'no');
 
 const brainEven = () => {
   let count = 0;

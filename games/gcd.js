@@ -1,4 +1,6 @@
-import { greeting, isCorrect, getAnswer, getRandom } from '../src/index.js';
+import { greeting, isCorrect, getAnswer } from '../src/index.js';
+
+const getRandom = () => Math.floor(Math.random() * 30);
 
 const gcd = (pair) => {
   const arr = pair.split(' ').sort();
