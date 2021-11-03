@@ -1,5 +1,6 @@
-import readlineSync from 'readline-sync';
-import { getRandom, isEven, greeting, isCorrect, getAnswer } from '../src/index.js';
+import { getRandom, greeting, isCorrect, getAnswer } from '../src/index.js';
+
+const isEven = (int) => (int % 2 === 0) ? 'yes' : 'no';
 
 const brainEven = () => {
   let count = 0;
@@ -7,7 +8,7 @@ const brainEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (count < 3) {
     const random = getRandom();
-    let answer = getAnswer(random);
+    const answer = getAnswer(random);
     const correctans = isEven(random);
     if (isCorrect(correctans, answer)) {
       count += 1;
