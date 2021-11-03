@@ -21,10 +21,11 @@ const brainPrime = () => {
       count += 1;
       console.log('Correct!');
     } else {
-      count = 0;
       console.log(`${answer} is wrong answer ;(. Correct answer was ${correctans}.\nLet's try again, ${name}!`);
+      break;
     }
   }
+  if (count === 3) console.log(`Congratulations, ${name}!`);
 };
 
 export default brainPrime;
