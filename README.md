@@ -12,3 +12,5 @@ https://asciinema.org/a/jWOP0jA1Sd4ZgpgMQ78vbB7Hv
 https://asciinema.org/a/ixBFLtWajKIo4BYymiIiHbgTr
 ### Link to progression game
 https://asciinema.org/a/lM5oM1d9fqbuFFt5WQThWsAtQ
+### Link to prime game
+https://asciinema.org/a/WOT4XZ5LRI9qK6Dp5NNlvR1Kn
