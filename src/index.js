@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 
-export const isEven = (int) => (int % 2 === 0) ? 'yes' : 'no';
+export const isEven = (int) => ((int % 2 === 0) ? 'yes' : 'no');
 
-export const isCorrect = (corrans, ans) => (String(corrans) === ans) ? ans : !ans;
+export const isCorrect = (corrans, ans) => ((String(corrans) === ans) ? ans : !ans);
 
 export const getRandom = () => Math.floor(Math.random() * 30);
 
