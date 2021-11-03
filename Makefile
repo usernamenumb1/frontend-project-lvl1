@@ -8,6 +8,8 @@ brain-calc: # для запуска брейнкалк жс
 	node bin/brain-calc.js
 brain-gcd: # для запуска брейнgdc жс
 	node bin/brain-gcd.js
+brain-progression: # для запуска брейнпрогрешн жс
+	node bin/brain-progression.js
 publish: # для публикации
 	npm publish --dry-run
 lint: # запускает линтер
