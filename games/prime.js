@@ -3,7 +3,8 @@ import { greeting, isCorrect, getAnswer } from '../src/index.js';
 const getRandom = () => Math.floor(Math.random() * 200);
 
 const isPrime = (int) => {
-  for (let i = 2; i < Math.sqrt(int) + 1; i += 1) {
+  if (int < 2) return 'no';
+  for (let i = 2; i <= Math.sqrt(int); i += 1) {
     if (int % i === 0) return 'no';
   }
   return 'yes';
