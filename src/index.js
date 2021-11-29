@@ -18,18 +18,20 @@ const getAnswer = (a) => {
 export default (gameRules, func) => {
   let count = 0;
   const name = greeting();
-  console.log(gameRules);
-  while (count < 3) {
-    const expr = func();
-    const answer = getAnswer(expr[0]);
-    const correctans = expr[1];
-    if (isCorrect(correctans, answer)) {
-      count += 1;
-      console.log('Correct!');
-    } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctans}.\nLet's try again, ${name}!`);
-      break;
+  if (gameRules && func) {
+    console.log(gameRules);
+    while (count < 3) {
+      const expr = func();
+      const answer = getAnswer(expr[0]);
+      const correctans = expr[1];
+      if (isCorrect(correctans, answer)) {
+        count += 1;
+        console.log('Correct!');
+      } else {
+        console.log(`${answer} is wrong answer ;(. Correct answer was ${correctans}.\nLet's try again, ${name}!`);
+        break;
+      }
     }
+    if (count === 3) console.log(`Congratulations, ${name}!`);
   }
-  if (count === 3) console.log(`Congratulations, ${name}!`);
 };
