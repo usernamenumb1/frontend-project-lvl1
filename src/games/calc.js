@@ -29,4 +29,4 @@ const getRandomExp = () => {
   return [`${random1} ${symbol} ${random2}`, solution([random1, symbol, random2])];
 };
 
-export default () => brainGame('What is the result of the expression?', getRandomExp());
+export default () => brainGame('What is the result of the expression?', getRandomExp);
