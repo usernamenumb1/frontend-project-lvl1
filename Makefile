@@ -1,5 +1,7 @@
 install: # ботва для создания воспроизводимой сборки 
 	npm ci
+install-games: # ботва для подключеия пакетов 
+	npm link
 brain-games: # для запуска брейнгамез жс
 	bin/brain-games.js
 brain-even: # для запуска брейнивен жс

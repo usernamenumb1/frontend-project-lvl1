@@ -1,20 +1,16 @@
 import brainGame from '../index.js';
-
-const getRandom = () => Math.floor(Math.random() * 30);
-
-const getRandomStep = () => Math.floor(Math.random() * 9);
+import getRandom from '../randomath.js';
 
 const getRandomProg = () => {
-  let firstitem = getRandom();
-  let step = getRandomStep();
+  let firstitem = getRandom(0, 30);
+  const step = getRandom(3, 9);
   const arr = [firstitem];
-  while (step < 2) step = getRandomStep();
   while (arr.length < 10) {
     const nextitem = firstitem + step;
     arr.push(nextitem);
     firstitem = nextitem;
   }
-  const missspot = getRandomStep();
+  const missspot = getRandom(0, 9);
   const missint = arr[missspot];
   arr[missspot] = '..';
   return [arr.join(' '), missint];

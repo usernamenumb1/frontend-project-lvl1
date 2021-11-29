@@ -1,4 +1,5 @@
 import brainGame from '../index.js';
+import getRandom from '../randomath.js';
 
 const isPrime = (int) => {
   if (int < 2) return 'no';
@@ -8,9 +9,6 @@ const isPrime = (int) => {
   return 'yes';
 };
 
-const getRandom = () => {
-  const rand = Math.floor(Math.random() * 200);
-  return [rand, isPrime(rand)];
-};
+const getRandomInt = () => getRandom(0, 200, isPrime);
 
-export default () => brainGame('Answer "yes" if given number is prime. Otherwise answer "no".', getRandom);
+export default () => brainGame('Answer "yes" if given number is prime. Otherwise answer "no".', getRandomInt);

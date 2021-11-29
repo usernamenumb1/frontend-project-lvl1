@@ -1,6 +1,5 @@
 import brainGame from '../index.js';
-
-const getRandom = () => Math.floor(Math.random() * 30);
+import getRandom from '../randomath.js';
 
 const gcd = (arr) => {
   const [r1, r2] = arr;
