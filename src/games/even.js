@@ -1,9 +1,10 @@
 import brainGame from '../index.js';
-import getRandom from '../randomath.js';
+import getRandom from '../utils.js';
 
-const isEven = () => {
+const isEven = (int) => ((int % 2 === 0) ? 'yes' : 'no');
+
+const getRandomEven = () => {
   const rand = getRandom();
-  return ((rand % 2 === 0) ? [rand, 'yes'] : [rand, 'no']);
+  return [rand, isEven(rand)];
 };
-
-export default () => brainGame('Answer "yes" if the number is even, otherwise answer "no".', isEven);
+export default () => brainGame('Answer "yes" if the number is even, otherwise answer "no".', getRandomEven);

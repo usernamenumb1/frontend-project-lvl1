@@ -1,19 +1,19 @@
 import brainGame from '../index.js';
-import getRandom from '../randomath.js';
+import getRandom from '../utils.js';
 
-const getRandomProg = () => {
-  let firstitem = getRandom(0, 30);
+const getRandomProgression = () => {
+  let firstItem = getRandom(0, 30);
   const step = getRandom(3, 9);
-  const arr = [firstitem];
-  while (arr.length < 10) {
-    const nextitem = firstitem + step;
-    arr.push(nextitem);
-    firstitem = nextitem;
+  const randomArray = [firstItem];
+  while (randomArray.length < 10) {
+    const nextitem = firstItem + step;
+    randomArray.push(nextitem);
+    firstItem = nextitem;
   }
-  const missspot = getRandom(0, 9);
-  const missint = arr[missspot];
-  arr[missspot] = '..';
-  return [arr.join(' '), missint];
+  const missedNumberIndex = getRandom(0, 10);
+  const missedNumber = randomArray[missedNumberIndex];
+  randomArray[missedNumberIndex] = '..';
+  return [randomArray.join(' '), missedNumber];
 };
 
-export default () => brainGame('What number is missing in the progression?', getRandomProg);
+export default () => brainGame('What number is missing in the progression?', getRandomProgression);

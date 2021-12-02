@@ -16,22 +16,19 @@ const getAnswer = (a) => {
 };
 
 export default (gameRules, func) => {
-  let count = 0;
   const name = greeting();
   if (gameRules && func) {
     console.log(gameRules);
-    while (count < 3) {
+    for (let i = 0; i < 3; i += 1) {
       const expr = func();
       const answer = getAnswer(expr[0]);
       const correctans = expr[1];
-      if (isCorrect(correctans, answer)) {
-        count += 1;
-        console.log('Correct!');
-      } else {
+      if (!isCorrect(correctans, answer)) {
         console.log(`${answer} is wrong answer ;(. Correct answer was ${correctans}.\nLet's try again, ${name}!`);
         break;
       }
+      console.log('Correct!');
     }
-    if (count === 3) console.log(`Congratulations, ${name}!`);
+    console.log(`Congratulations, ${name}!`);
   }
 };
