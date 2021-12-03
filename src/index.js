@@ -15,20 +15,20 @@ const getAnswer = (a) => {
   return answer;
 };
 
-export default (gameRules, func) => {
+export default (gameRules, getExpression) => {
   const name = greeting();
-  if (gameRules && func) {
+  if (gameRules && getExpression) {
     console.log(gameRules);
     for (let i = 0; i < 3; i += 1) {
-      const expr = func();
-      const answer = getAnswer(expr[0]);
-      const correctans = expr[1];
-      if (!isCorrect(correctans, answer)) {
-        console.log(`${answer} is wrong answer ;(. Correct answer was ${correctans}.\nLet's try again, ${name}!`);
+      const expression = getExpression();
+      const answer = getAnswer(expression[0]);
+      const correctAnswer = expression[1];
+      if (!isCorrect(correctAnswer, answer)) {
+        console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`);
         break;
       }
       console.log('Correct!');
+      if (i === 2) console.log(`Congratulations, ${name}!`);
     }
-    console.log(`Congratulations, ${name}!`);
   }
 };
