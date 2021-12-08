@@ -7,7 +7,7 @@ const getRandomExpression = () => {
   const randomNumber1 = utils.getRandom();
   const randomNumber2 = utils.getRandom();
   const randomExpression = `${randomNumber1} ${symbol} ${randomNumber2}`;
-  let resultOfExpression = 0;
+  let resultOfExpression;
   switch (symbol) {
     case '+':
       resultOfExpression = randomNumber1 + randomNumber2;
@@ -23,5 +23,5 @@ const getRandomExpression = () => {
   }
   return [randomExpression, resultOfExpression];
 };
-
-export default () => brainGame('What is the result of the expression?', getRandomExpression);
+const gameRules = 'What is the result of the expression?';
+export default () => brainGame(gameRules, getRandomExpression);

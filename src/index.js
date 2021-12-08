@@ -19,16 +19,17 @@ export default (gameRules, getExpression) => {
   const name = greeting();
   if (gameRules && getExpression) {
     console.log(gameRules);
-    for (let i = 0; i < 3; i += 1) {
+    const rounds = 3;
+    for (let i = 0; i < rounds; i += 1) {
       const expression = getExpression();
       const answer = getAnswer(expression[0]);
       const correctAnswer = expression[1];
       if (!isCorrect(correctAnswer, answer)) {
         console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${name}!`);
-        break;
+        return;
       }
       console.log('Correct!');
-      if (i === 2) console.log(`Congratulations, ${name}!`);
     }
   }
+  console.log(`Congratulations, ${name}!`);
 };

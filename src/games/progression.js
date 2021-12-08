@@ -2,14 +2,12 @@ import brainGame from '../index.js';
 import utils from '../utils.js';
 
 const getProgression = (firstItem, step) => {
-  const arrayOfProgression = [];
-  let currentItem = firstItem;
-  while (arrayOfProgression.length < 10) {
-    const nextItem = currentItem + step;
-    arrayOfProgression.push(currentItem);
-    currentItem = nextItem;
+  const progressionArray = [];
+  const maxProgressionLength = 10;
+  for (let i = 0; i < maxProgressionLength; i += 1) {
+    progressionArray.push(firstItem + (step * i));
   }
-  return arrayOfProgression;
+  return progressionArray;
 };
 
 const getRandomProgression = () => {
@@ -22,5 +20,5 @@ const getRandomProgression = () => {
   const stringifyProgression = progressionArray.join(' ');
   return [stringifyProgression, missedNumber];
 };
-
-export default () => brainGame('What number is missing in the progression?', getRandomProgression);
+const gameRules = 'What number is missing in the progression?';
+export default () => brainGame(gameRules, getRandomProgression);
