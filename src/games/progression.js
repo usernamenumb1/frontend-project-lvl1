@@ -15,10 +15,10 @@ const getRandomProgression = () => {
   const step = utils.getRandom(3, 9);
   const progressionArray = getProgression(firstItem, step);
   const missedNumberIndex = utils.getRandom(0, 10);
-  const missedNumber = progressionArray[missedNumberIndex];
+  const answer = progressionArray[missedNumberIndex];
   progressionArray[missedNumberIndex] = '..';
-  const stringifyProgression = progressionArray.join(' ');
-  return [stringifyProgression, missedNumber];
+  const question = progressionArray.join(' ');
+  return [question, answer];
 };
 const gameRules = 'What number is missing in the progression?';
 export default () => brainGame(gameRules, getRandomProgression);

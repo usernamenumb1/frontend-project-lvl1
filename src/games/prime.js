@@ -10,9 +10,9 @@ const isPrime = (number) => {
 };
 
 const getRandomPrime = () => {
-  const randomNumber = utils.getRandom(0, 200);
-  const isRandomNumberPrime = isPrime(randomNumber) ? 'yes' : 'no';
-  return [randomNumber, isRandomNumberPrime];
+  const question = utils.getRandom(0, 200);
+  const answer = isPrime(question) ? 'yes' : 'no';
+  return [question, answer];
 };
 const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 export default () => brainGame(gameRules, getRandomPrime);
