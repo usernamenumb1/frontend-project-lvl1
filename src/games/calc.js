@@ -2,8 +2,8 @@ import brainGame from '../index.js';
 import utils from '../utils.js';
 
 const getRandomExpression = () => {
-  const mathSings = '+-*';
-  const symbol = mathSings.charAt(utils.getRandom(0, mathSings.length));
+  const operations = '+-*';
+  const symbol = operations.charAt(utils.getRandom(0, operations.length));
   const randomNumber1 = utils.getRandom();
   const randomNumber2 = utils.getRandom();
   const question = `${randomNumber1} ${symbol} ${randomNumber2}`;
